@@ -2,7 +2,6 @@
 import Image from '~/components/common/Image.astro';
 import Button from '~/components/ui/Button.astro';
 import type { CallToAction } from '~/types';
-import Matter from './Matter.astro';
 
 export interface Props {
   id?: string;
@@ -67,7 +66,27 @@ const {
         </div>
         {content && <Fragment set:html={content} />}
       </div>
-      
-      <Matter></Matter>
+      <div>
+        {
+          image && (
+            <div class="relative m-auto max-w-5xl">
+              {typeof image === 'string' ? (
+                <Fragment set:html={image} />
+              ) : (
+                <Image
+                  class="mx-auto rounded-md w-full"
+                  widths={[400, 768, 1024, 2040]}
+                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+                  loading="eager"
+                  width={1024}
+                  height={576}
+                  {...image}
+                />
+              )}
+            </div>
+          )
+        }
+      </div>
+    </div>
   </div>
 </section>
