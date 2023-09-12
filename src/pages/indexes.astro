@@ -1,0 +1,184 @@
+---
+import Layout from '~/layouts/NdLandingLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+
+import Kuula from '~/components/widgets/Kuula.astro';
+
+const metadata = {
+  title: 'Recorridos Virtuales para Bienes Raíces',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Widget de Héroe ************************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: '¡Regístrate ahora!',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+      { text: 'Aprende más', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/hero.png', alt: 'Imagen del Héroe de AstroWind' }}
+  >
+  
+    <Fragment slot="title">
+      ¿Listo para dar un paso hacia el futuro en bienes raíces?</span> 
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">¡Descubre el Poder de los Recorridos Virtuales!</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600"></span>
+    </Fragment>
+  </Hero>
+
+  <Features
+  id="features"
+  tagline="Características"
+  title="Lo Que Obtienes con Nuestros Recorridos Virtuales 3D de Propiedades"
+  subtitle="Brindamos Experiencias de Visualización Profesional, Integral e Inmersiva. Los Recorridos Virtuales 3D más buscados en Bienes Raíces en 2022."
+  items={[
+    {
+      title: 'Visualizaciones 3D de Alta Calidad',
+      description:
+        'Ofrecemos modelos 3D de alta definición de tus propiedades, proporcionando una experiencia inmersiva para posibles compradores o inquilinos.',
+      icon: 'tabler:components',
+    },
+    {
+      title: 'Ahorra Tiempo y Esfuerzo',
+      description:
+        'Los recorridos virtuales ahorran tiempo tanto a agentes de bienes raíces como a clientes al permitir la inspección de propiedades en cualquier momento y desde cualquier lugar.',
+      icon: 'tabler:components',
+    },
+    {
+      title: 'Destácate en el Mercado',
+      description:
+        'Mejora tus listados con tecnología de vanguardia, destacando tus propiedades frente a la competencia.',
+      icon: 'tabler:components',
+    },
+    {
+      title: 'Integración Fácil',
+      description:
+        'Ofrecemos soporte completo para integrar los recorridos en tu sitio web, haciendo que sea una experiencia sin problemas.',
+      icon: 'tabler:components',
+    },
+    {
+      title: 'Estadísticas Detalladas de Visitantes',
+      description:
+        'Obtén información sobre el comportamiento y las preferencias de los visitantes para ayudar a refinar tu enfoque de venta. Disponible en nuestro plan premium.',
+      icon: 'tabler:components',
+    },
+    {
+      title: 'Soporte al Cliente Excepcional',
+      description:
+        'Nuestro equipo se dedica a garantizar que tengas la mejor experiencia, ofreciendo ayuda y respuestas a todas tus consultas.',
+      icon: 'tabler:components',
+    },
+  ]}
+/>
+
+<Content
+  isReversed
+  tagline="Recorridos Virtuales 3D de Propiedades"
+  title="Experimenta la Inmersión: Nuestros Recorridos Virtuales 3D en Acción"
+  items={[
+    {
+      title: 'Recorridos 3D Inmersivos',
+      description:
+        'Muestra tu propiedad con detalles en 3D de alta calidad, permitiendo que los posibles compradores la exploren como nunca antes.',
+    },
+    {
+      title: 'Accesible en Cualquier Lugar y Momento',
+      description:
+        'Los posibles compradores o inquilinos pueden inspeccionar propiedades en su propio tiempo, desde la comodidad de su hogar.',
+    },
+    {
+      title: 'Integración Fácil',
+      description:
+        'Nuestros recorridos se pueden integrar fácilmente en tu sitio web con el completo apoyo de nuestro equipo.',
+    },
+  ]}
+  image={{
+    src: 'src/assets/video/visita-virtual.gif',
+    alt: 'Video de Recorrido de Propiedades en 3D',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Experimenta el Futuro de los Recorridos de Propiedades</h3>
+     Actualiza tus listados de bienes raíces con tecnología inmersiva en 3D.
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+<Steps
+  title="Obtén tu Recorrido Virtual de Bienes Raíces con AstroVR"
+  items={[
+    {
+      title: 'Paso 1: <span class="font-medium">Planifica tu Recorrido</span>',
+      description:
+        "Comienza planificando tu recorrido virtual de bienes raíces. Determina las propiedades que deseas destacar y crea una lista de características clave para resaltar.",
+      icon: 'tabler:package',
+    },
+    {
+      title: 'Paso 2: <span class="font-medium">Captura Fotos de 360°</span>',
+      description:
+        "Utiliza una cámara de 360° para capturar fotos de alta calidad de las propiedades. Asegúrate de capturar cada habitación y detalle importante.",
+      icon: 'tabler:package',
+    },
+    {
+      title: 'Paso 3: <span class="font-medium">Crea Contenido de RV</span>',
+      description:
+        'Utiliza software de creación de contenido de RV para convertir tus fotos en experiencias inmersivas de realidad virtual. Agrega elementos interactivos y navegación.',
+      icon: 'tabler:package',
+    },
+    {
+      title: 'Paso 4: <span class="font-medium">Construye tu Sitio Web</span>',
+      description:
+        'Elige un creador de sitios web que admita contenido de RV o contrata a un desarrollador para crear un sitio web de recorrido de bienes raíces de RV personalizado.',
+      icon: 'tabler:package',
+    },
+    {
+      title: 'Paso 5: <span class="font-medium">Añade el Recorrido al Sitio Web</span>',
+      description:
+        'Integra tu recorrido de RV en tu sitio web. Asegúrate de que los usuarios puedan acceder y navegar por el recorrido fácilmente.',
+      icon: 'tabler:package',
+    },
+    {
+      title: 'Paso 6: <span class="font-medium">Prueba y Optimiza</span>',
+      description:
+        'Prueba tu recorrido de RV en varios dispositivos para asegurarte de la compatibilidad y el rendimiento. Realiza optimizaciones según sea necesario.',
+      icon: 'tabler:package',
+    },
+    {
+      title: 'Paso 7: <span class="font-medium">Lanza tu Recorrido</span>',
+      description:
+        'Una vez que todo esté listo, lanza tu recorrido de bienes raíces de realidad virtual y comienza a mostrar tus propiedades a posibles compradores.',
+      icon: 'tabler:package',
+    },
+  ]}
+  image={{
+    src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+    alt: 'Imagen de los Pasos',
+  }}
+/>
+
+  <Kuula></Kuula>
+</Layout>
+
+
+
+
+   
