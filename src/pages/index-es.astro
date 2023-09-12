@@ -1,0 +1,144 @@
+---
+import Layout from '~/layouts/NdLandingLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+
+import Kuula from '~/components/widgets/Kuula.astro';
+
+const metadata = {
+  title: 'Recorridos Virtuales para Bienes Raíces',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Widget de Héroe ************************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: '¡Inscríbete ahora!',
+        href: '/signup',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+      { text: 'descubre más', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/hero.png', alt: 'imagen heroica' }}
+  >
+  
+  <Fragment slot="title">
+    ¿Estás listo para revolucionar el mundo inmobiliario?
+  </Fragment>
+
+  <Fragment slot="subtitle">
+      Vive la nueva dimensión en bienes raíces con nuestros Recorridos Virtuales 360°.
+    </Fragment>
+    </Hero>
+  
+    <!-- Widget de Características ************************* -->
+  
+    <Features
+    id="features"
+    tagline="Funcionalidad"
+    title="Transforma tu Propuesta de Valor con Nuestros Recorridos Virtuales 3D"
+    subtitle="Ofrecemos vistas tridimensionales dinámicas, interactivas y de alta calidad. Descubre porque somos el líder en Recorridos Virtuales 3D en bienes raíces en 2022."
+    items={[
+      {
+        title: 'Imágenes 3D Inigualables',
+        description:
+          'Generamos modelos 3D ultra-realistas de tus propiedades, creando una experiencia virtual irresistible para potenciales compradores o inquilinos.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Optimiza tu Eficiencia',
+        description:
+          'Los recorridos virtuales reducen drásticamente el tiempo de visitas, permitiendo a tus clientes explorar propiedades desde cualquier lugar y en cualquier momento.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Destaca sobre la Competencia',
+      description:
+        'Eleva tus listados con tecnología punta y captura la atención de tus clientes con opciones de vista ultra-modernas.',
+      icon: 'tabler:components',
+    },
+    {
+      title: 'Integración Sencilla',
+      description:
+        'Brindamos soporte integral para incorporar los recorridos virtuales a tu página web, asegurándonos que la transición sea fácil y sin complicaciones.',
+      icon: 'tabler:components',
+    },
+    {
+      title: 'Análisis en Profundidad de Visitas',
+      description:
+        'Obtén valiosos datos sobre el comportamiento de tus visitantes y usa esta información para mejorar tu estrategia de ventas. Disponible con nuestro plan premium.',
+      icon: 'tabler:components',
+    },
+    {
+      title: 'Soporte al Cliente Premium',
+      description:
+        'Nuestro equipo está completamente comprometido en proporcionarte la mejor experiencia, brindando asistencia y respuestas a todas tus preguntas.',
+      icon: 'tabler:components',
+    },
+  ]}
+/>
+
+  <!-- Widget de Pasos************************* -->
+
+<Steps
+title="Obtén tu Recorrido Virtual con AstroVR:"
+items={[
+  {
+    title: 'Paso 1: Diseña tu Recorrido',
+    description:
+      "Planifica cómo deseas que sea tu recorrido virtual. Selecciona las propiedades que quieres destacar y haz una lista de los puntos claves para enfocarte.",
+    icon: 'tabler:components',
+  },
+  {
+    title: 'Paso 2: Toma Fotografías en 360°',
+    description:
+      "Realiza fotos de alta calidad en 360° de las propiedades. No te olvides de capturar cada espacio importante y cada detalle significativo.",
+    icon: 'tabler:components',
+  },
+  {
+    title: 'Paso 3: Crea Contenido AR (Realidad Aumentada)',
+    description:
+      'Utiliza la herramienta de producción de AR para transformar tus fotos en experiencias inmersivas de realidad virtual. Agrega elementos interactivos y opciones de navegación a tu elección.',
+    icon: 'tabler:components',
+  },
+  {
+    title: 'Paso 4: Construye tu Sitio Web',
+    description:
+      'Elige una plataforma de creación de sitios web que admita contenido de AR, o si lo prefieres, contrata un desarrollador para crear un sitio web personalizado de recorridos de bienes raíces.',
+    icon: 'tabler:components',
+  },
+  {
+    title: 'Paso 5: Incorpora el Recorrido al Sitio Web',
+    description:
+      'Incorpora tu recorrido de Realidad Aumentada a tu sitio web. Asegúrate de que los usuarios puedan accederlo y navegarlo fácilmente.',
+    icon: 'tabler:components',
+  },
+  {
+    title: 'Paso 6: Prueba y Optimiza',
+    description:
+      'Verifica el rendimiento de tu recorrido en diferentes dispositivos para garantizar su compatibilidad y optimiza detalles según sea necesario.',
+    icon: 'tabler:components',
+  },
+  {
+    title: 'Paso 7: Lanza tu Recorrido',
+    description:
+      'Una vez que todo esté listo, publica tu recorrido virtual de bienes raíces e inicia la aventura de mostrar tus propiedades a potenciales compradores de manera revolucionaria.',
+    icon: 'tabler:components',
+  },
+]}
+image={{
+  src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+  alt: 'Imagen de los Pasos',
+}}
+/>
+
+<Kuula></Kuula>
+</Layout>
